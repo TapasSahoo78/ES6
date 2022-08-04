@@ -1,0 +1,72 @@
+<html>
+
+<head>
+
+    <!-- include jquery -->
+
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+
+</head>
+
+<body>
+
+    <input type="checkbox" value="1">
+
+    <input type="checkbox" value="2">
+
+    <input type="checkbox" value="3">
+
+    <input type="checkbox" value="4">
+
+</body>
+
+
+<script>
+
+    $(document).ready(function () {
+
+        /*get the total checkbox number using length*/
+
+        var x = $("input[type=checkbox]").length;
+
+        /* if checkbox is changed */
+
+        $('input[type=checkbox]').on('change', function (i) {
+
+            if ($(this).is(':checked')) {
+
+                x -= 1;
+
+                /* if all checkbox is checked */
+
+                if (x == 0) {
+
+                    var val = [];
+
+                    /* use each method to get all checkbox values into an object */
+
+                    $(':checkbox:checked').each(function (i) {
+
+                        val[i] = $(this).val();
+                        console.log(val)
+
+                    });
+
+
+                }
+
+            }
+
+            else {
+
+                x += 1;
+
+            }
+
+        });
+
+    });
+
+</script>
+
+</html>
