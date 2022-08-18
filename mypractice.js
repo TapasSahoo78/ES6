@@ -54,7 +54,7 @@
 const myData = async() =>{
 try {
    let a = 10;
-   console.log(a);
+   console.log("🚀 ~ file: mypractice.js ~ line 57 ~ myData ~ a", a)
 } catch (error) {
     throw error.message;
 }finally{
